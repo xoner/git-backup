@@ -32,5 +32,5 @@ else
     echo "Backing up the work";
     git add .
     git commit -m "Changes at $(date +%Y-%m-%d-%H-%M)"
-    git push origin master
+    git remote show | xargs -I {} git push {} master
 fi
